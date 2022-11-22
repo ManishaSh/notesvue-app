@@ -1,0 +1,8 @@
+@import "./base.css";
+body {
+  background-color: #dedbdb;
+  
+}
+#app {
+  padding: 24px;
+}
