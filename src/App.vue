@@ -14,7 +14,9 @@ const notesService = new NotesService();
 export default {
   name: "App",
   mounted() {
+    //@ts-ignore
     this.getNotes();
+
   },
   data() {
     return {

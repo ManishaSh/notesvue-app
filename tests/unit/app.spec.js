@@ -1,13 +1,19 @@
-import {shallowMount} from '@vue/test-utils'
 import App from '../../src/App.vue'
+import {NotesService} from "@/services/Notes.service";
+import Vue from 'vue'
 
 
-describe('App', () => {
-    it('renders props.msg when passed', () => {
-        const msg = 'new message'
-        const wrapper = shallowMount(App, {
-            props: { msg }
-        })
-        expect(wrapper.text()).toMatch(msg)
+describe('App.vue', () => {
+    let vm
+    before(() => {
+        const Constructor = Vue.extend(App)
+        vm = new Constructor({
+            props: {
+                service: {
+                    notesService: NotesService
+                }
+            }
+        }).$mount()
     })
+
 })

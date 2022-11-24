@@ -56,9 +56,8 @@
 <script lang="ts">
 
 import Dialog from "@/components/dialogue.vue";
-import axios from "axios";
 
-declare type cols = "id" | "title" | "content" | "status";
+declare type cols = "id" | "title" | "content" | "status"
 
 export default {
   name: "todo-list",
@@ -72,7 +71,7 @@ export default {
     }>
   },
   mounted() {
-  //@ts-ignore
+    // @ts-ignore
     console.log(this.notes)
   },
   data() {
